@@ -36,7 +36,7 @@
                                    <td>${board.bno}</td>
                                    <td><a href="/board/get?bno=${board.bno}">${board.title}</a></td>
                                    <td><c:out value="${board.writer}"/></td>
-                                   <td><fmt:formatDate pattern="yyy-MM-dd" value="${board.regdate }"/></td>
+                                   <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate }"/></td>
                                    <td><fmt:formatDate pattern="MM-dd hh:mm" value="${board.updatedate}"/></td>
                                  </tr>
  </c:forEach>     
