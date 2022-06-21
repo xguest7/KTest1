@@ -90,7 +90,16 @@ public class BoardMapperTests {
 	
 	@Test
 	public void testCount() {
-		log.info("글개수는:" + mapper.count());
+		//log.info("글개수는:" + mapper.count());
+		
+		//1.전체를 개수 확인
+		Criteria cri = new Criteria();
+		log.info("글개수는:" + mapper.count(cri));
+		
+		//2.검색글 개수 확인
+		cri.setType("TW");
+		cri.setKeyword("a");
+		log.info("검색된 글개수:" + mapper.count(cri));
 	}
 	
 	@Test
